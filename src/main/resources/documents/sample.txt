@@ -1,0 +1,4 @@
+The Crag Engine project demonstrates a simple retrieval-augmented generation (RAG) pipeline implemented in Spring Boot.
+It showcases how Java services can orchestrate document loading, chunking, embedding, and storage against an in-memory vector index.
+
+This sample document is intentionally short, yet it still flows through the full ingestion pipeline so that contributors can verify the plumbing without contacting external data providers.
