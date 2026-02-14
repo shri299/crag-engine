@@ -30,13 +30,13 @@ public class EmbeddingService {
 			.body(request)
 			.retrieve()
 			.body(EmbeddingResponse.class);
-		if (response.embedding() == null || response.embedding().isEmpty()) {
+		if (response == null || response.embedding() == null || response.embedding().isEmpty()) {
 			throw new IllegalStateException("Embedding service returned no data");
 		}
 		return response.embedding();
 	}
 
-	private record EmbeddingRequest(String model, String input) {
+	private record EmbeddingRequest(String model, String prompt) {
 	}
 
 	private record EmbeddingResponse(List<Double> embedding) {
